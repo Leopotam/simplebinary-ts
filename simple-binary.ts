@@ -119,7 +119,7 @@ export class SimpleBinarySerializer {
     public readS16(): string {
         const l = this._data.readUInt16LE(this._offset)
         const end = this._offset + 2 + l
-        const v = this._data.toString('utf8', this._offset + 1, end)
+        const v = this._data.toString('utf8', this._offset + 2, end)
         this._offset = end
         return v
     }
